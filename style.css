@@ -16,12 +16,13 @@ body {
     display: flex;
     background-color: white;
     border-radius: 1rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     max-width: 50rem;
 }
 img[alt=drawers] {
     width: 40%;
     background-size: cover;
+    border-radius: 1rem;
 }
 .sub-container {
     display: flex;
@@ -40,6 +41,7 @@ img[alt=drawers] {
     line-height: 1.4rem;
 }
 .profile-container {
+    position: relative;
     margin-top: 0.8rem;
     display: flex;
     align-items: center;
@@ -68,7 +70,63 @@ img[alt=michelle] {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.icon-container:hover {
+    background-color: hsl(210, 46%, 85%);
+}
+.icon-container:active {
+    background-color: hsl(210, 46%, 95%);
 }
 .icon-container img {
     width: 50%;
+}
+#links-container {
+    z-index: 1;
+    position:absolute;
+    top: -200%;
+    right: 0;
+    transform: translateX(40%);
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: hsl(217, 19%, 35%);
+    width: 17rem;
+}
+#links-container a {
+    text-decoration: none;
+    transition: transform .2s;
+}
+#links-container a:hover {
+    transform: scale(1.1) translateY(-0.1rem);
+}
+
+#links-container p {
+    color: hsl(210, 46%, 85%);
+    letter-spacing: 0.5rem;
+    margin-right: 1rem;
+}
+#square {
+    display: none;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: hsl(217, 19%, 35%);
+    top: -120%;
+    right: 0;
+    transform: rotateZ(45deg) translateX(-10%);
+}
+
+@media (max-width:940px){
+    .container {
+        margin: 1.5rem;
+        max-width: 25rem;
+        flex-direction: column;
+    }
+    img[alt=drawers] {
+        width: 100%;
+    }
 }
