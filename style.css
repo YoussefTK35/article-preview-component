@@ -121,6 +121,10 @@ img[alt=michelle] {
 }
 
 @media (max-width:940px){
+    body {
+        align-items: flex-start;
+        height: auto;
+    }
     .container {
         margin: 1.5rem;
         max-width: 25rem;
@@ -128,5 +132,11 @@ img[alt=michelle] {
     }
     img[alt=drawers] {
         width: 100%;
+    }
+    .heading {
+        font-size: 1.3rem;
+    }
+    #links-container {
+        transform: translateX(10%);
     }
 }
